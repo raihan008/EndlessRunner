@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.Translate (0,0,0.1f);
 
-        if (Input.GetKey("a"))
+        if (Input.GetKey("j"))
         {
             jump = true;
         }
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Input.GetKey("s"))
+        if (Input.GetKey("x"))
         {
             slide = true;
         }
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         if (jump == true)
         {
             anim.SetBool("isJump", jump);
-            transform.Translate(0, 0.4f, 0.1f);
+            transform.Translate(0, 0.4f, 0);
         
         }
         else if (jump == false)
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         if (slide == true)
         {
             anim.SetBool("isSlide", slide);
-            transform.Translate(0, 0, 0.1f);
+            transform.Translate(0, 0, 0.2f);
 
         }
         else if (slide == false)
@@ -66,5 +66,29 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isSlide", slide);
 
         }
+
+
+      if (Input.GetKey("d"))
+          {
+              transform.Translate(0.1f, 0, 0);
+          }
+      if (Input.GetKey("a"))
+        {
+            transform.Translate(-0.1f, 0, 0);
+        }
+
+
+      if (Input.GetKey("w"))
+      {
+          transform.Translate(0, 0, 0.5f);
+      }
+
+      if (Input.GetKey("z"))
+      {
+          transform.Translate(0, 0, 1);
+      }
+
+
+
     }
 }
